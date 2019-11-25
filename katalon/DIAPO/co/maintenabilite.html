@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+  <meta http-equiv="x-ua-compatible" content="IE=EDGE">
+  <title>Pour une maintenabilit&eacute; du code</title>
+  <meta charset="UTF-8">
+  <meta name="generator" content="SCENARI 4.2.107 / Opale 3.7.001">
+  <meta name="revision" content="2019-11-25 09:55">
+  <link rel="start" href="Katalon.html" title="Le test automatis&eacute; avec Katalon Studio">
+  <meta name="author" content>
+  <meta name="keywords" content>
+  <meta name="date" content>
+  <script type="text/JavaScript">
+/*0*/ var scServices = {id:"k3e99oa2"};
+/*1*/ window.scLoadParams = {destUri:"/co/maintenabilite.html", pathToRoot:"../"};
+</script>
+  <script type="text/JavaScript" src="../lib-sc/scCoLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scSiLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scPaLib.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_tplMgr/tplMgr.js"></script>
+  <script type="text/JavaScript">
+/* A - sort key */
+try{if (window.parent && window.parent.scHPS){
+   var scHPS = window.parent.scHPS;
+   var scSldMgr = new scHPS.SldMgr("ide:tplPge", window);
+   (function(pSldMgr){
+     pSldMgr.addBindableBlk("des:div.imgInFlow",{ratioHeightAlone:1,ratioHeight:.85,captionHeight:45},scHPS.SizeBlkImg);
+     pSldMgr.addBindableBlk("des:div.imgIllus",{ratioHeightAlone:.6,ratioHeight:.5,captionHeight:45},scHPS.SizeBlkImg);
+     pSldMgr.addBindableBlk("des:span.imgInline",{captionHeight:0},scHPS.SizeBlkImg);
+     pSldMgr.addBindableBlk("des:span.imgLabel",{ratioHeight:.5,captionHeight:0},scHPS.SizeBlkImg);
+     pSldMgr.addBindableBlk("des:div.objInFlow",null,scHPS.SizeBlkObj);
+     pSldMgr.addBindableBlk("des:div.vidInFlow",{onAction:function(pRes){try{this.fObj.SetVariable("player:jsPause", "")}catch(e){};try{this.fObj.pause()}catch(e){};}},scHPS.SizeBlkObj);
+     pSldMgr.addBindableBlk("des:span.objInline",{captionHeight:0},scHPS.SizeBlkObj);
+     pSldMgr.addBindableBlk("des:a.ssZmLnk",null,scHPS.FraZmBlk);
+     pSldMgr.addBindableBlk("des:a.htmlZmLnk",{setModeHtml:true},scHPS.FraZmBlk);
+     pSldMgr.addBindableBlk("des:div.imgGal",{autoStart:false},scHPS.AnimBlk);
+   })(scSldMgr);
+}}catch(e){}
+
+</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link type="text/css" rel="stylesheet" href="../skin/css/slideHtml.css" media="screen" title="modeHTML">
+  <link type="text/css" rel="alternate stylesheet" href="../skin/css/slideSS.css" media="screen" title="modeSS">
+  <!--[if IE]><link type="text/css" rel="stylesheet" href="../skin/css/ie.css"/><![endif]-->
+  <!--[if lt IE 7]><link type="text/css" rel="stylesheet" href="../skin/css/ie6.css"/><![endif]--></head>
+ <body>
+  <div id="tplPge"><div id="tplSld"><div class="slideBk slideBkExpUc"><h1 class="slideBk_ti"><span>Pour une maintenabilit&eacute; du code</span></h1><div class="slideBk_co "><div class="ssBkRoot"><div class="ssBk"><div class="bkBase bkInfo bkBase_noti"><div class="bkBase_co "><div class="ssBkCoParent"><div class="ssBkCo"><p>Quel sentiment magique ressent le testeur lorsque, pour la premi&egrave;re fois depuis le d&eacute;but du projet, il lance son arsenal de tests automatis&eacute;s... H&eacute;las, cette touchante &eacute;motion peut vite laisser place au d&eacute;sappointement si la maintenabilit&eacute; n'a pas &eacute;t&eacute; au c&oelig;ur de la conception de l'architecture des tests</p><p>Heureusement, Katalon r&eacute;pond &agrave; cette probl&eacute;matique essentiellement gr&acirc;ce &agrave; deux fonctionnalit&eacute;s :</p><ul class="txt_il "><li class="txt_ili "><p>La cr&eacute;ation de variables</p></li><li class="txt_ili "><p>Les mots-cl&eacute;s personnalis&eacute;s&nbsp;: les Custom Keywords (hors scope)</p></li></ul></div></div></div></div></div><div class="ssBk"><div class="bkBase bkBp bkDef bkBase_noti"><div class="bkBase_co "><div class="ssBkCoParent"><div class="ssBkCo"><p>La maintenabilit&eacute; est, dans le domaine informatique, la capacit&eacute; pour des composants ou des applications &agrave; &ecirc;tre maintenus en &eacute;tat de fonctionnement,  de mani&egrave;re coh&eacute;rente et &agrave; moindre co&ucirc;t,</p></div></div></div></div></div><div class="ssBk"><div class="bkBase bkBp bkRem bkBase_noti"><div class="bkBase_co "><div class="ssBkCoParent"><div class="ssBkCo"><p>Une bonne maintenabilit&eacute; d'un patrimoine de tests automatis&eacute;s r&eacute;duit les temps (et donc le co&ucirc;t) de maintenance entre chaque &eacute;volution de l'application. <strong class="txt_emphasis_is ">Cela permet un <a class="txt_zm_ul txt_glos_ul ssZmLnk" target="_blank" href="ROI.html?mode=html" title="ROI (Return on Investment) (nouvelle fen&ecirc;tre)"><span>ROI</span></a> plus rapide</strong></p></div></div></div></div></div></div></div></div></div><hr class="hidden"><strong class="hidden">Navigation :</strong><div id="tplNav"><a id="btnRoot" class="outNav_i" target="_self" href="Katalon.html?mode=html" title="Retourner &agrave; l'accueil"><span>Accueil</span></a><span class="hidden"> | </span><span class="sw_stack"><strong class="hidden">Position&nbsp;: </strong><span class=" sw_stack_navList"><a href="ameliorerScript.html" target="_self" class=" tocSld tocCourseUa bkCnt_1"><span>Am&eacute;lioration des scripts Katalon</span></a><span class="stackSep"><span> &gt; </span></span><span class=" tocSld tocExpUc bkCnt_3"><span>Pour une maintenabilit&eacute; du code</span></span></span></span><span class="hidden"> | </span><a id="btnPrv" href="ameliorerScript.html?mode=html" target="_self" class="outNav_i" title="Am&eacute;lioration des scripts Katalon (page pr&eacute;c&eacute;dente)"><span>&lt; Pr&eacute;c&eacute;dent</span></a><span class="hidden"> | </span><a id="btnNxt" href="2Variables.html?mode=html" target="_self" class="outNav_i" title="Am&eacute;lioration des scripts Katalon&nbsp;: Les Variables (page suivante)"><span>Suivant &gt;</span></a></div></div>
+  <script type="text/JavaScript" src="../skin/js/slide.js"></script>
+ </body>
+</html>
