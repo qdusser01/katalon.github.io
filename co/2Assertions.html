@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+  <meta http-equiv="x-ua-compatible" content="IE=EDGE">
+  <title>De l'enregistrement au test&nbsp;: les assertions</title>
+  <meta charset="UTF-8">
+  <meta name="generator" content="SCENARI 4.2.107 / Opale 3.7.001">
+  <meta name="revision" content="2019-11-25 09:55">
+  <link rel="start" href="Katalon.html" title="Le test automatis&eacute; avec Katalon Studio">
+  <meta name="author" content>
+  <meta name="keywords" content>
+  <meta name="date" content>
+  <script type="text/JavaScript">
+/*0*/ var scServices = {id:"k3e99oa2"};
+/*1*/ window.scLoadParams = {destUri:"/co/2Assertions.html", pathToRoot:"../"};
+</script>
+  <script type="text/JavaScript" src="../lib-sc/scCoLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scSiLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scPaLib.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_tplMgr/tplMgr.js"></script>
+  <script type="text/JavaScript">
+/* A - sort key */
+try{if (window.parent && window.parent.scHPS){
+   var scHPS = window.parent.scHPS;
+   var scSldMgr = new scHPS.SldMgr("ide:tplPge", window);
+   (function(pSldMgr){
+     pSldMgr.addBindableBlk("des:div.imgInFlow",{ratioHeightAlone:1,ratioHeight:.85,captionHeight:45},scHPS.SizeBlkImg);
+     pSldMgr.addBindableBlk("des:div.imgIllus",{ratioHeightAlone:.6,ratioHeight:.5,captionHeight:45},scHPS.SizeBlkImg);
+     pSldMgr.addBindableBlk("des:span.imgInline",{captionHeight:0},scHPS.SizeBlkImg);
+     pSldMgr.addBindableBlk("des:span.imgLabel",{ratioHeight:.5,captionHeight:0},scHPS.SizeBlkImg);
+     pSldMgr.addBindableBlk("des:div.objInFlow",null,scHPS.SizeBlkObj);
+     pSldMgr.addBindableBlk("des:div.vidInFlow",{onAction:function(pRes){try{this.fObj.SetVariable("player:jsPause", "")}catch(e){};try{this.fObj.pause()}catch(e){};}},scHPS.SizeBlkObj);
+     pSldMgr.addBindableBlk("des:span.objInline",{captionHeight:0},scHPS.SizeBlkObj);
+     pSldMgr.addBindableBlk("des:a.ssZmLnk",null,scHPS.FraZmBlk);
+     pSldMgr.addBindableBlk("des:a.htmlZmLnk",{setModeHtml:true},scHPS.FraZmBlk);
+     pSldMgr.addBindableBlk("des:div.imgGal",{autoStart:false},scHPS.AnimBlk);
+   })(scSldMgr);
+}}catch(e){}
+
+</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link type="text/css" rel="stylesheet" href="../skin/css/slideHtml.css" media="screen" title="modeHTML">
+  <link type="text/css" rel="alternate stylesheet" href="../skin/css/slideSS.css" media="screen" title="modeSS">
+  <!--[if IE]><link type="text/css" rel="stylesheet" href="../skin/css/ie.css"/><![endif]-->
+  <!--[if lt IE 7]><link type="text/css" rel="stylesheet" href="../skin/css/ie6.css"/><![endif]--></head>
+ <body>
+  <div id="tplPge"><div id="tplSld"><div class="slideBk slideBkExpUc"><h1 class="slideBk_ti"><span>De l'enregistrement au test&nbsp;: les assertions</span></h1><div class="slideBk_co "><div class="ssBkRoot"><div class="ssBk"><div class="bkBase bkBp bkDef"><h2 class="bkBase_ti"><span>Assertion&nbsp;(n. f.)</span></h2><div class="bkBase_co "><div class="ssBkCoParent"><div class="ssBkCo"><p>Une assertion est une proposition, affirmative ou n&eacute;gative, qui est pr&eacute;sent&eacute;e comme vraie et incontestable par celui qui l'&eacute;nonce. (<em class="txt_special_is ">Larousse</em>)</p><p>En programmation informatique, une assertion est une expression qui doit &ecirc;tre &eacute;valu&eacute;e &agrave; vrai. Si cette &eacute;valuation &eacute;choue elle peut mettre fin &agrave; l'ex&eacute;cution du programme, ou bien lancer une exception.</p></div></div></div></div></div><div class="ssBk"><div class="bkBase bkInfo"><h2 class="bkBase_ti"><span>Quel est l'int&eacute;r&ecirc;t des assertions dans le test&nbsp;?</span></h2><div class="bkBase_co "><div class="ssBkCoParent"><div class="ssBkCo"><p>Dans le test automatis&eacute;, les assertions sont indispensables.<strong class="txt_emphasis_is "> Elles constituent le test</strong>.</p><p>On utilisera les assertions pour</p><ul class="txt_il "><li class="txt_ili "><p>les v&eacute;rifications de pr&eacute;sence (ou d'absence) d'&eacute;l&eacute;ments tels que&nbsp;: du texte, un logo, une image,...</p></li><li class="txt_ili "><p>s'assurer de la s&eacute;lection d'une option ou de l'&eacute;tat d'un bouton.</p></li></ul></div></div></div></div></div><div class="ssBk"><div class="bkBase bkInfo"><h2 class="bkBase_ti"><span>Les assertions dans Katalon</span></h2><div class="bkBase_co "><div class="ssBkCoParent"><div class="ssBkCo"><p>Pour r&eacute;aliser les  v&eacute;rifications attendues l'automaticien utilisera les actions <code>Verify</code></p><p>Le testeur peut configurer l'issue du test en fonction de la validit&eacute; ou non de l'assertion.</p><div class="ssCutable imgInFlow"><div class="resFra"><img src="../res/changeResult.png" alt class="imgBase " width="800" height="327"><a class="zoom" href="#" title="Zoom..." style="display:none;"><span>Zoom</span></a></div><div class="imgOthers" style="visibility: hidden; position:absolute; top:-10000px; left-10000px;"><span data-src="../res/changeResult_1.png" data-width="1200" data-height="490"></span></div><div class="caption"></div></div></div></div></div></div></div><div class="ssBk"><div class="bkBase bkBp bkEx"><h2 class="bkBase_ti"><span>Verify</span></h2><div class="bkBase_co "><div class="ssBkCoParent"><div class="ssBkCo"><table class="txtRes ssCutable"><tr><td class="txtResTxt "><p>M&eacute;thode principale d'assertion.</p><p>Les deux sous cat&eacute;gories les plus utilis&eacute;es sont&nbsp;: <code>verifyText</code> (present/notPresent) et <code>verifyElement</code> (clickable/checked/present/visible,... or not)</p></td><td class="txtResResRgt "><div class="ssCutable imgIllus"><div class="resFra"><img src="../res/verifyAssert.png" alt class="imgBase " width="102" height="267"><a class="zoom" href="#" title="Zoom..." style="display:none;"><span>Zoom</span></a></div><div class="imgOthers" style="visibility: hidden; position:absolute; top:-10000px; left-10000px;"><span data-src="../res/verifyAssert.gif" data-width="307" data-height="800"></span></div><div class="caption"></div></div></td></tr></table></div></div></div></div></div><div class="ssBk"><div class="bkBase bkBp bkRemind bkBase_noti"><div class="bkBase_co "><div class="ssBkCoParent"><div class="ssBkCo"><p>Capturer les &eacute;l&eacute;ments visuels et cliquables&nbsp;: &quot;Alt + &ugrave;&quot; en mode <strong class="txt_emphasis_is ">Spy Web</strong></p><div class="ssCutable imgInFlow"><div class="resFra"><img src="../res/SpyWeb0.png" alt class="imgBase " width="784" height="533"><a class="zoom" href="#" title="Zoom..." style="display:none;"><span>Zoom</span></a></div><div class="imgOthers" style="visibility: hidden; position:absolute; top:-10000px; left-10000px;"><span data-src="../res/SpyWeb0_1.png" data-width="1043" data-height="709"></span></div><div class="caption"></div></div><div class="ssCutable imgInFlow"><div class="resFra"><img src="../res/SpyWeb.png" alt class="imgBase " width="800" height="445"><a class="zoom" href="#" title="Zoom..." style="display:none;"><span>Zoom</span></a></div><div class="imgOthers" style="visibility: hidden; position:absolute; top:-10000px; left-10000px;"><span data-src="../res/SpyWeb_1.png" data-width="1200" data-height="668"></span></div><div class="caption"></div></div></div></div></div></div></div></div></div></div></div><hr class="hidden"><strong class="hidden">Navigation :</strong><div id="tplNav"><a id="btnRoot" class="outNav_i" target="_self" href="Katalon.html?mode=html" title="Retourner &agrave; l'accueil"><span>Accueil</span></a><span class="hidden"> | </span><span class="sw_stack"><strong class="hidden">Position&nbsp;: </strong><span class=" sw_stack_navList"><a href="AjouterLesAssertion.html" target="_self" class=" tocSld tocCourseUa bkCnt_1"><span>Ajouter les assertions au script Katalon</span></a><span class="stackSep"><span> &gt; </span></span><span class=" tocSld tocExpUc bkCnt_5"><span>De l'enregistrement au test&nbsp;: les assertions</span></span></span></span><span class="hidden"> | </span><a id="btnPrv" href="AjouterLesAssertion.html?mode=html" target="_self" class="outNav_i" title="Ajouter les assertions au script Katalon (page pr&eacute;c&eacute;dente)"><span>&lt; Pr&eacute;c&eacute;dent</span></a><span class="hidden"> | </span><a id="btnNxt" href="exerciceRecap.html?mode=html" target="_self" class="outNav_i" title="Exercice&nbsp;: 3 (page suivante)"><span>Suivant &gt;</span></a></div></div>
+  <script type="text/JavaScript" src="../skin/js/slide.js"></script>
+ </body>
+</html>
