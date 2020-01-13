@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+  <meta http-equiv="x-ua-compatible" content="IE=EDGE">
+  <title>Une ligne de script = une m&eacute;thode impl&eacute;ment&eacute;e</title>
+  <meta charset="UTF-8">
+  <meta name="generator" content="SCENARI 4.2.107 / Opale 3.7.001">
+  <meta name="revision" content="2020-01-13 14:54">
+  <link rel="start" href="GENERAL.html" title="Le Behaviour Driven Development avec Squash">
+  <meta name="author" content>
+  <meta name="keywords" content>
+  <meta name="date" content>
+  <script type="text/JavaScript">
+/*0*/ var scServices = {id:"k5ckjigh"};
+/*1*/ window.scLoadParams = {destUri:"/co/le_pas-de_test.html", pathToRoot:"../"};
+</script>
+  <script type="text/JavaScript" src="../lib-sc/scCoLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scSiLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scPaLib.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_tplMgr/tplMgr.js"></script>
+  <script type="text/JavaScript">
+/* A - sort key */
+try{if (window.parent && window.parent.scHPS){
+   var scHPS = window.parent.scHPS;
+   var scSldMgr = new scHPS.SldMgr("ide:tplPge", window);
+   (function(pSldMgr){
+     pSldMgr.addBindableBlk("des:div.imgInFlow",{ratioHeightAlone:1,ratioHeight:.85,captionHeight:45},scHPS.SizeBlkImg);
+     pSldMgr.addBindableBlk("des:div.imgIllus",{ratioHeightAlone:.6,ratioHeight:.5,captionHeight:45},scHPS.SizeBlkImg);
+     pSldMgr.addBindableBlk("des:span.imgInline",{captionHeight:0},scHPS.SizeBlkImg);
+     pSldMgr.addBindableBlk("des:span.imgLabel",{ratioHeight:.5,captionHeight:0},scHPS.SizeBlkImg);
+     pSldMgr.addBindableBlk("des:div.objInFlow",null,scHPS.SizeBlkObj);
+     pSldMgr.addBindableBlk("des:div.vidInFlow",{onAction:function(pRes){try{this.fObj.SetVariable("player:jsPause", "")}catch(e){};try{this.fObj.pause()}catch(e){};}},scHPS.SizeBlkObj);
+     pSldMgr.addBindableBlk("des:span.objInline",{captionHeight:0},scHPS.SizeBlkObj);
+     pSldMgr.addBindableBlk("des:a.ssZmLnk",null,scHPS.FraZmBlk);
+     pSldMgr.addBindableBlk("des:a.htmlZmLnk",{setModeHtml:true},scHPS.FraZmBlk);
+     pSldMgr.addBindableBlk("des:div.imgGal",{autoStart:false},scHPS.AnimBlk);
+   })(scSldMgr);
+}}catch(e){}
+
+</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link type="text/css" rel="stylesheet" href="../skin/css/slideHtml.css" media="screen" title="modeHTML">
+  <link type="text/css" rel="alternate stylesheet" href="../skin/css/slideSS.css" media="screen" title="modeSS">
+  <!--[if IE]><link type="text/css" rel="stylesheet" href="../skin/css/ie.css"/><![endif]-->
+  <!--[if lt IE 7]><link type="text/css" rel="stylesheet" href="../skin/css/ie6.css"/><![endif]--></head>
+ <body>
+  <div id="tplPge"><div id="tplSld"><div class="slideBk slideBkExpUc"><h1 class="slideBk_ti"><span>Une ligne de script = une m&eacute;thode impl&eacute;ment&eacute;e</span></h1><div class="slideBk_co "><div class="ssBkRoot"><div class="ssBk"><div class="bkBase bkInfo bkBase_noti"><div class="bkBase_co "><div class="ssBkCoParent"><div class="ssBkCo"><p>Pour le framework Cucumber, un script Gherkin est un fichier <strong class="txt_emphasis_is ">.feature</strong> qu'il interpr&egrave;te selon des r&egrave;gles syntaxiques. La plus importante &eacute;tant la suivante&nbsp;:</p><p><strong class="txt_emphasis_is "> Chaque ligne <code>Given</code>, <code>Then</code>, <code>When</code>, <code>But</code>, <code>And</code> implique l'existence d'une m&eacute;thode associ&eacute;e.</strong></p><div class="ssCutable imgInFlow"><div class="resFra"><img src="../res/Gherkin_exemple.png" alt class="imgBase " width="800" height="216"><a class="zoom" href="#" title="Zoom..." style="display:none;"><span>Zoom</span></a></div><div class="imgOthers" style="visibility: hidden; position:absolute; top:-10000px; left-10000px;"><span data-src="../res/Gherkin_exemple_1.png" data-width="1148" data-height="310"></span></div><div class="caption"></div></div><div class="listingBk ssCutable"><div class="code "><div class="CodeMirror-static cm-s-default" data-lang="text/x-java"><div class="CodeMirror-code"><div class="CodeMirror-line"><pre><span class="cm-meta">@Etantdonn&eacute;que</span>(<span class="cm-string">&quot;Je suis un client de la banque&quot;</span>)</pre></div><div class="CodeMirror-line"><pre><span class="cm-keyword">public</span> <span class="cm-variable-3">void</span> <span class="cm-def">je_suis_un_client_de_la_banque</span>() {</pre></div><div class="CodeMirror-line"><pre>    <span class="cm-comment">// Write code here that turns the phrase above into concrete actions</span></pre></div><div class="CodeMirror-line"><pre>    <span class="cm-keyword">throw</span> <span class="cm-keyword">new</span> <span class="cm-variable">cucumber</span>.<span class="cm-variable">api</span>.<span class="cm-variable">PendingException</span>();</pre></div><div class="CodeMirror-line"><pre>}</pre></div><div class="CodeMirror-line"><pre></pre></div><div class="CodeMirror-line"><pre><span class="cm-meta">@Quand</span>(<span class="cm-string">&quot;Je possede un compte en ligne&quot;</span>)</pre></div><div class="CodeMirror-line"><pre><span class="cm-keyword">public</span> <span class="cm-variable-3">void</span> <span class="cm-def">je_possede_un_compte_en_ligne</span>() {</pre></div><div class="CodeMirror-line"><pre>    <span class="cm-comment">// Write code here that turns the phrase above into concrete actions</span></pre></div><div class="CodeMirror-line"><pre>    <span class="cm-keyword">throw</span> <span class="cm-keyword">new</span> <span class="cm-variable">cucumber</span>.<span class="cm-variable">api</span>.<span class="cm-variable">PendingException</span>();</pre></div><div class="CodeMirror-line"><pre>}</pre></div><div class="CodeMirror-line"><pre></pre></div><div class="CodeMirror-line"><pre><span class="cm-meta">@Alors</span>(<span class="cm-string">&quot;j'accede a mon espace personnel&quot;</span>)</pre></div><div class="CodeMirror-line"><pre><span class="cm-keyword">public</span> <span class="cm-variable-3">void</span> <span class="cm-def">j_accede_a_mon_espace_personnel</span>() {</pre></div><div class="CodeMirror-line"><pre>    <span class="cm-comment">// Write code here that turns the phrase above into concrete actions</span></pre></div><div class="CodeMirror-line"><pre>    <span class="cm-keyword">throw</span> <span class="cm-keyword">new</span> <span class="cm-variable">cucumber</span>.<span class="cm-variable">api</span>.<span class="cm-variable">PendingException</span>();</pre></div><div class="CodeMirror-line"><pre>}</pre></div></div></div></div></div><ul class="txt_il "><li class="txt_ili "><p>L'annotation de la m&eacute;thode doit reprendre scrupuleusement les termes du pas de test (mot-cl&eacute; et instruction)</p></li></ul><ul class="txt_il "><li class="txt_ili "><p>Si une ligne n'&eacute;tait rattach&eacute;e &agrave; aucune m&eacute;thode, l'ex&eacute;cution remontrait fatalement une erreur.</p></li></ul></div></div></div></div></div></div></div></div></div><hr class="hidden"><strong class="hidden">Navigation :</strong><div id="tplNav"><a id="btnRoot" class="outNav_i" target="_self" href="GENERAL.html?mode=html" title="Retourner &agrave; l'accueil"><span>Accueil</span></a><span class="hidden"> | </span><span class="sw_stack"><strong class="hidden">Position&nbsp;: </strong><span class=" sw_stack_navList"><a href="Implementation.html" target="_self" class=" tocSld tocCourseUa bkCnt_1"><span>L'impl&eacute;mentation des mots-cl&eacute;s</span></a><span class="stackSep"><span> &gt; </span></span><span class=" tocSld tocExpUc bkCnt_1"><span>Une ligne de script = une m&eacute;thode impl&eacute;ment&eacute;e</span></span></span></span><span class="hidden"> | </span><a id="btnPrv" href="Intro_Implementation.html?mode=html" target="_self" class="outNav_i" title="Vers l'automatisation des test (page pr&eacute;c&eacute;dente)"><span>&lt; Pr&eacute;c&eacute;dent</span></a><span class="hidden"> | </span><a id="btnNxt" href="la_gestion_des_donnees_cucumber.html?mode=html" target="_self" class="outNav_i" title="Donn&eacute;es de test et param&egrave;tres de m&eacute;thode (page suivante)"><span>Suivant &gt;</span></a></div></div>
+  <script type="text/JavaScript" src="../skin/js/slide.js"></script>
+ </body>
+</html>

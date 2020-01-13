@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+  <meta http-equiv="x-ua-compatible" content="IE=EDGE">
+  <title>Encodage et caract&egrave;re sp&eacute;ciaux</title>
+  <meta charset="UTF-8">
+  <meta name="generator" content="SCENARI 4.2.107 / Opale 3.7.001">
+  <meta name="revision" content="2020-01-13 14:54">
+  <link rel="start" href="GENERAL.html" title="Le Behaviour Driven Development avec Squash">
+  <meta name="author" content>
+  <meta name="keywords" content>
+  <meta name="date" content>
+  <script type="text/JavaScript">
+/*0*/ var scServices = {id:"k5ckjigh"};
+/*1*/ window.scLoadParams = {destUri:"/co/Encodage_et_caracteres_speciaux.html", pathToRoot:"../"};
+</script>
+  <script type="text/JavaScript" src="../lib-sc/scCoLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scSiLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scPaLib.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_tplMgr/tplMgr.js"></script>
+  <script type="text/JavaScript">
+/* A - sort key */
+try{if (window.parent && window.parent.scHPS){
+   var scHPS = window.parent.scHPS;
+   var scSldMgr = new scHPS.SldMgr("ide:tplPge", window);
+   (function(pSldMgr){
+     pSldMgr.addBindableBlk("des:div.imgInFlow",{ratioHeightAlone:1,ratioHeight:.85,captionHeight:45},scHPS.SizeBlkImg);
+     pSldMgr.addBindableBlk("des:div.imgIllus",{ratioHeightAlone:.6,ratioHeight:.5,captionHeight:45},scHPS.SizeBlkImg);
+     pSldMgr.addBindableBlk("des:span.imgInline",{captionHeight:0},scHPS.SizeBlkImg);
+     pSldMgr.addBindableBlk("des:span.imgLabel",{ratioHeight:.5,captionHeight:0},scHPS.SizeBlkImg);
+     pSldMgr.addBindableBlk("des:div.objInFlow",null,scHPS.SizeBlkObj);
+     pSldMgr.addBindableBlk("des:div.vidInFlow",{onAction:function(pRes){try{this.fObj.SetVariable("player:jsPause", "")}catch(e){};try{this.fObj.pause()}catch(e){};}},scHPS.SizeBlkObj);
+     pSldMgr.addBindableBlk("des:span.objInline",{captionHeight:0},scHPS.SizeBlkObj);
+     pSldMgr.addBindableBlk("des:a.ssZmLnk",null,scHPS.FraZmBlk);
+     pSldMgr.addBindableBlk("des:a.htmlZmLnk",{setModeHtml:true},scHPS.FraZmBlk);
+     pSldMgr.addBindableBlk("des:div.imgGal",{autoStart:false},scHPS.AnimBlk);
+   })(scSldMgr);
+}}catch(e){}
+
+</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link type="text/css" rel="stylesheet" href="../skin/css/slideHtml.css" media="screen" title="modeHTML">
+  <link type="text/css" rel="alternate stylesheet" href="../skin/css/slideSS.css" media="screen" title="modeSS">
+  <!--[if IE]><link type="text/css" rel="stylesheet" href="../skin/css/ie.css"/><![endif]-->
+  <!--[if lt IE 7]><link type="text/css" rel="stylesheet" href="../skin/css/ie6.css"/><![endif]--></head>
+ <body>
+  <div id="tplPge"><div id="tplSld"><div class="slideBk slideBkExpUc"><h1 class="slideBk_ti"><span>Encodage et caract&egrave;re sp&eacute;ciaux</span></h1><div class="slideBk_co "><div class="ssBkRoot"><div class="ssBk"><div class="bkBase bkBp bkWarning"><h2 class="bkBase_ti"><span>&Eacute;viter les erreurs d'interpr&eacute;tation</span></h2><div class="bkBase_co "><div class="ssBkCoParent"><div class="ssBkCo"><p>La question de l'encodage et de la gestion des caract&egrave;res sp&eacute;ciaux est particuli&egrave;rement pr&eacute;gnante en Fran&ccedil;ais, puisque la langue utilise des apostrophes et de l'accentuation.</p></div></div></div></div></div><div class="ssContainer"><div class="bkBase bkDiv"><h2 class="bkBase_ti"><span>Deux exemples de probl&egrave;mes commun&eacute;ment rencontr&eacute;s lors de l'automatisation de scripts Gherkin</span></h2><div class="bkBase_co "><div class="ssBkRoot"><div class="ssBk"><div class="bkBase bkBp bkEx"><h3 class="bkBase_ti"><span>L'utilisation des apostrophes</span></h3><div class="bkBase_co "><div class="ssBkCoParent"><div class="ssBkCo"><p>Le texte se trouvant entre deux apostrophes sera consid&eacute;r&eacute; par Cucumber comme une donn&eacute;e de test (cha&icirc;ne de caract&egrave;res)</p><div class="ssCutable imgInFlow"><div class="resFra"><img src="../res/Gherkin_apostrophe.png" alt class="imgBase " width="800" height="183"><a class="zoom" href="#" title="Zoom..." style="display:none;"><span>Zoom</span></a></div><div class="imgOthers" style="visibility: hidden; position:absolute; top:-10000px; left-10000px;"><span data-src="../res/Gherkin_apostrophe_1.png" data-width="1200" data-height="274"></span></div><div class="caption"></div></div><p>Si le testeur n'&eacute;chappe pas ces apostrophes, alors voici ce que comprendra Cucumber&nbsp;:</p><div class="listingBk ssCutable"><div class="code "><div class="CodeMirror-static cm-s-default" data-lang="text/x-java"><div class="CodeMirror-code"><div class="CodeMirror-line"><pre><span class="cm-meta">@When</span>(<span class="cm-string">&quot;Je valide l{string}un article dont le prix est {int} euros&quot;</span>)</pre></div><div class="CodeMirror-line"><pre><span class="cm-keyword">public</span> <span class="cm-variable-3">void</span> <span class="cm-def">je_valide_l_un_article_dont_le_prix_est_euros</span>(<span class="cm-variable-3">String</span> <span class="cm-variable">string</span>, <span class="cm-variable-3">Integer</span> <span class="cm-variable">int1</span>) {</pre></div><div class="CodeMirror-line"><pre>    <span class="cm-comment">// Write code here that turns the phrase above into concrete actions</span></pre></div><div class="CodeMirror-line"><pre>}</pre></div></div></div></div></div><p>Voici comment &eacute;chapper les apostrophes de mani&egrave;re &agrave; &eacute;viter toutes incompr&eacute;hension</p><div class="ssCutable imgInFlow"><div class="resFra"><img src="../res/Gherkin_apostrophe_echap.png" alt class="imgBase " width="800" height="176"><a class="zoom" href="#" title="Zoom..." style="display:none;"><span>Zoom</span></a></div><div class="imgOthers" style="visibility: hidden; position:absolute; top:-10000px; left-10000px;"><span data-src="../res/Gherkin_apostrophe_echap_1.png" data-width="1200" data-height="263"></span></div><div class="caption"></div></div></div></div></div></div></div><div class="ssBk"><div class="bkBase bkBp bkEx"><h3 class="bkBase_ti"><span>G&eacute;rer l'encodage du serveur d'ex&eacute;cution</span></h3><div class="bkBase_co "><div class="ssBkCoParent"><div class="ssBkCo"><p>En fran&ccedil;ais, les mots-cl&eacute;s Gherkin comprennent des accents qu'un &eacute;diteur de texte Gherkin interpr&eacute;tera correctement si le script est pr&eacute;c&eacute;d&eacute; de l'instruction <code>#language&nbsp;:fr</code>.</p><div class="ssCutable imgInFlow"><div class="resFra"><img src="../res/Gherkin_encodage.png" alt class="imgBase " width="800" height="271"><a class="zoom" href="#" title="Zoom..." style="display:none;"><span>Zoom</span></a></div><div class="imgOthers" style="visibility: hidden; position:absolute; top:-10000px; left-10000px;"><span data-src="../res/Gherkin_encodage_1.png" data-width="1200" data-height="407"></span></div><div class="caption"></div></div><p>N&eacute;anmoins, il se peut que le serveur d'ex&eacute;cution automatis&eacute; (sur lequel repose l'interpr&eacute;teur Cucumber), utilise un encodage standard qui ne lit pas les accent ( ex&nbsp;: Cp1252).</p><p>Si tel est le cas, l'ex&eacute;cution renverrait un message d'erreur comme suit&nbsp;:</p><div class="ssCutable imgInFlow"><div class="resFra"><img src="../res/Gherkin_erreur_encodage.png" alt class="imgBase " width="800" height="91"><a class="zoom" href="#" title="Zoom..." style="display:none;"><span>Zoom</span></a></div><div class="imgOthers" style="visibility: hidden; position:absolute; top:-10000px; left-10000px;"><span data-src="../res/Gherkin_erreur_encodage_1.png" data-width="1200" data-height="137"></span></div><div class="caption"></div></div><p>Pour r&eacute;soudre ce probl&egrave;me, assurez-vous que l'encodage du serveur d'ex&eacute;cution utilise un type d'encodage ad&eacute;quat (ex&nbsp;:UTF-8)</p></div></div></div></div></div></div></div></div></div></div></div></div></div><hr class="hidden"><strong class="hidden">Navigation :</strong><div id="tplNav"><a id="btnRoot" class="outNav_i" target="_self" href="GENERAL.html?mode=html" title="Retourner &agrave; l'accueil"><span>Accueil</span></a><span class="hidden"> | </span><span class="sw_stack"><strong class="hidden">Position&nbsp;: </strong><span class=" sw_stack_navList"><a href="Implementation.html" target="_self" class=" tocSld tocCourseUa bkCnt_1"><span>L'impl&eacute;mentation des mots-cl&eacute;s</span></a><span class="stackSep"><span> &gt; </span></span><span class=" tocSld tocExpUc bkCnt_3"><span>Encodage et caract&egrave;re sp&eacute;ciaux</span></span></span></span><span class="hidden"> | </span><a id="btnPrv" href="patrimoine_existant.html?mode=html" target="_self" class="outNav_i" title="Capitaliser sur un patrimoine existant (page pr&eacute;c&eacute;dente)"><span>&lt; Pr&eacute;c&eacute;dent</span></a><span class="hidden"> | </span><span class="outNav_i" title="Fin (pas de page suivante)">Suivant &gt;</span></div></div>
+  <script type="text/JavaScript" src="../skin/js/slide.js"></script>
+ </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+  <meta http-equiv="x-ua-compatible" content="IE=EDGE">
+  <title>Le BDD&nbsp;: acteurs et workflow</title>
+  <meta charset="UTF-8">
+  <meta name="generator" content="SCENARI 4.2.107 / Opale 3.7.001">
+  <meta name="revision" content="2020-01-13 14:54">
+  <link rel="start" href="GENERAL.html" title="Le Behaviour Driven Development avec Squash">
+  <meta name="author" content>
+  <meta name="keywords" content>
+  <meta name="date" content>
+  <script type="text/JavaScript">
+/*0*/ var scServices = {id:"k5ckjigh"};
+/*1*/ window.scLoadParams = {destUri:"/co/BDD_contexte_metier.html", pathToRoot:"../"};
+</script>
+  <script type="text/JavaScript" src="../lib-sc/scCoLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scSiLib.js"></script>
+  <script type="text/JavaScript" src="../lib-sc/scPaLib.js"></script>
+  <script type="text/JavaScript" src="../lib-md/w_tplMgr/tplMgr.js"></script>
+  <script type="text/JavaScript">
+/* A - sort key */
+try{if (window.parent && window.parent.scHPS){
+   var scHPS = window.parent.scHPS;
+   var scSldMgr = new scHPS.SldMgr("ide:tplPge", window);
+   (function(pSldMgr){
+     pSldMgr.addBindableBlk("des:div.imgInFlow",{ratioHeightAlone:1,ratioHeight:.85,captionHeight:45},scHPS.SizeBlkImg);
+     pSldMgr.addBindableBlk("des:div.imgIllus",{ratioHeightAlone:.6,ratioHeight:.5,captionHeight:45},scHPS.SizeBlkImg);
+     pSldMgr.addBindableBlk("des:span.imgInline",{captionHeight:0},scHPS.SizeBlkImg);
+     pSldMgr.addBindableBlk("des:span.imgLabel",{ratioHeight:.5,captionHeight:0},scHPS.SizeBlkImg);
+     pSldMgr.addBindableBlk("des:div.objInFlow",null,scHPS.SizeBlkObj);
+     pSldMgr.addBindableBlk("des:div.vidInFlow",{onAction:function(pRes){try{this.fObj.SetVariable("player:jsPause", "")}catch(e){};try{this.fObj.pause()}catch(e){};}},scHPS.SizeBlkObj);
+     pSldMgr.addBindableBlk("des:span.objInline",{captionHeight:0},scHPS.SizeBlkObj);
+     pSldMgr.addBindableBlk("des:a.ssZmLnk",null,scHPS.FraZmBlk);
+     pSldMgr.addBindableBlk("des:a.htmlZmLnk",{setModeHtml:true},scHPS.FraZmBlk);
+     pSldMgr.addBindableBlk("des:div.imgGal",{autoStart:false},scHPS.AnimBlk);
+   })(scSldMgr);
+}}catch(e){}
+
+</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link type="text/css" rel="stylesheet" href="../skin/css/slideHtml.css" media="screen" title="modeHTML">
+  <link type="text/css" rel="alternate stylesheet" href="../skin/css/slideSS.css" media="screen" title="modeSS">
+  <!--[if IE]><link type="text/css" rel="stylesheet" href="../skin/css/ie.css"/><![endif]-->
+  <!--[if lt IE 7]><link type="text/css" rel="stylesheet" href="../skin/css/ie6.css"/><![endif]--></head>
+ <body>
+  <div id="tplPge"><div id="tplSld"><div class="slideBk slideBkExpUc"><h1 class="slideBk_ti"><span>Le BDD&nbsp;: acteurs et workflow</span></h1><div class="slideBk_co "><div class="ssBkRoot"><div class="ssBk"><div class="bkBase bkInfo bkBase_noti"><div class="bkBase_co "><div class="ssBkCoParent"><div class="ssBkCo"><p>Dans un projet Agile, le BDD va formaliser la communication entre tous les membres d'une &eacute;quipe</p></div></div></div></div></div><div class="ssBk"><div class="bkBase bkInfo"><h2 class="bkBase_ti"><span>Les r&ocirc;les en Agile (ex&nbsp;: une &eacute;quipe Scrum)</span></h2><div class="bkBase_co "><div class="ssBkCoParent"><div class="ssBkCo"><ul class="txt_il "><li class="txt_ili "><p><strong class="txt_emphasis_is ">Le product owner</strong>&nbsp;: Il porte la vision du produit &agrave; r&eacute;aliser. Il doit faire en sorte qu'un maximum de valeur soit produite par l'&eacute;quipe, en comprenant parfaitement les enjeux et en faisant en sorte que les fonctionnalit&eacute;s importantes soient prioris&eacute;es comme telles. Il est responsable de la description des <em class="txt_special_is ">user stories</em> et doit s'assurer de la bonne compr&eacute;hension de l'&eacute;quipe...</p></li><li class="txt_ili "><p><strong class="txt_emphasis_is ">Le scrum master&nbsp;</strong>: Il est le facilitateur, celui qui s'assure que Scrum est compris et accept&eacute; par toute l'&eacute;quipe (il insuffle et facilite, il est &agrave; l'&eacute;coute de l'&eacute;quipe et prend toutes les dispositions possibles pour faciliter la progression de l'&eacute;quipe).</p></li><li class="txt_ili "><p><strong class="txt_emphasis_is ">L'&eacute;quipe</strong>&nbsp;: Elle est compos&eacute;e des personnes qui travaillent pour livrer un incr&eacute;ment &laquo;&nbsp;Fini&nbsp;&raquo; et potentiellement livrable en production. Elle s'auto-organise pour cr&eacute;er des incr&eacute;ments de produit fonctionnels et de qualit&eacute;. Elle se compose de testeurs (fonctionnels et/ou techniques) et de d&eacute;veloppeurs.</p></li></ul></div></div></div></div></div><div class="ssBk"><div class="bkBase bkInfo"><h2 class="bkBase_ti"><span>D&eacute;velopper un comportement sp&eacute;cifier</span></h2><div class="bkBase_co "><div class="ssBkCoParent"><div class="ssBkCo"><p>Dans la logique Agile BDD, le sc&eacute;nario est sp&eacute;cifi&eacute; avant le d&eacute;veloppement. A la fin du sprint, si tout s'est pass&eacute; comme convenu, les <em class="txt_special_is ">scenarii</em> sont en succ&egrave;s</p><div class="ssCutable imgInFlow"><div class="resFra"><img src="../res/BDD_manuel.png" alt class="imgBase " width="706" height="533"><a class="zoom" href="#" title="Zoom..." style="display:none;"><span>Zoom</span></a></div><div class="imgOthers" style="visibility: hidden; position:absolute; top:-10000px; left-10000px;"><span data-src="../res/BDD_manuel_1.png" data-width="1060" data-height="800"></span></div><div class="caption"></div></div></div></div></div></div></div><div class="ssBk"><div class="bkBase bkInfo"><h2 class="bkBase_ti"><span>Automatiser les TNR en BDD</span></h2><div class="bkBase_co "><div class="ssBkCoParent"><div class="ssBkCo"><p>Une fois le sc&eacute;nario en succ&egrave;s, l'&eacute;quipe aura pour t&acirc;che d'automatiser son ex&eacute;cution. Le sc&eacute;nario, s'il est bien sp&eacute;cifi&eacute;, deviendra le script de test automatis&eacute;, &agrave; condition qu'un automaticien impl&eacute;mente les mots-cl&eacute;s.</p><div class="ssCutable imgInFlow"><div class="resFra"><img src="../res/BDD_autom_TNR.png" alt class="imgBase " width="482" height="533"><a class="zoom" href="#" title="Zoom..." style="display:none;"><span>Zoom</span></a></div><div class="imgOthers" style="visibility: hidden; position:absolute; top:-10000px; left-10000px;"><span data-src="../res/BDD_autom_TNR_1.png" data-width="723" data-height="800"></span></div><div class="caption"></div></div></div></div></div></div></div></div></div></div></div><hr class="hidden"><strong class="hidden">Navigation :</strong><div id="tplNav"><a id="btnRoot" class="outNav_i" target="_self" href="GENERAL.html?mode=html" title="Retourner &agrave; l'accueil"><span>Accueil</span></a><span class="hidden"> | </span><span class="sw_stack"><strong class="hidden">Position&nbsp;: </strong><span class=" sw_stack_navList"><a href="Introduction_au_BDD.html" target="_self" class=" tocSld tocCourseUa bkCnt_1"><span>Introduction au Behaviour Driven Developpement (BDD)</span></a><span class="stackSep"><span> &gt; </span></span><span class=" tocSld tocExpUc bkCnt_4"><span>Le BDD&nbsp;: acteurs et workflow</span></span></span></span><span class="hidden"> | </span><a id="btnPrv" href="testing_first.html?mode=html" target="_self" class="outNav_i" title="Testing first - les m&eacute;thodes de d&eacute;veloppement Agile (page pr&eacute;c&eacute;dente)"><span>&lt; Pr&eacute;c&eacute;dent</span></a><span class="hidden"> | </span><a id="btnNxt" href="outil_du_BDD.html?mode=html" target="_self" class="outNav_i" title="Les outils du BDD - langage Gherkin et framework d'impl&eacute;mentation (page suivante)"><span>Suivant &gt;</span></a></div></div>
+  <script type="text/JavaScript" src="../skin/js/slide.js"></script>
+ </body>
+</html>

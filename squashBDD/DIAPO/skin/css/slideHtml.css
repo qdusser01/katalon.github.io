@@ -1,0 +1,207 @@
+/* *********************************************************
+	Import common CSS
+*/
+@import url("common.css");
+
+
+/* *********************************************************
+	Slideshow slide page styles
+*/
+#tplSld{
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	bottom: 65px;
+	overflow: auto;
+	font-size: 1.2em;
+}
+#tplNav{
+	bottom:0;
+	left:0;
+	width:100%;
+	height: 60px;
+	position: absolute;
+	display:flex;
+	align-items:center;
+}
+
+
+#btnRoot::before{
+	content:"\e80a";
+}
+
+span.outNav_i{
+	display: none;
+}
+span.sw_stack{
+	flex: 2 1 auto;
+	display: block;
+	color:#e46000;
+	font-size: 0.8em;
+	padding:0 1em;
+}
+
+div.imgOthers{
+	display: none;
+}
+
+/* *********************************************************
+	Content styles
+*/
+
+.slideBk{
+	text-align:right;
+}
+
+.slideBk_co{
+	text-align:left;
+	padding-left:20px
+}
+
+.partBk, .slideContact, .slideCourseUa{
+	text-align: center;
+	margin-top:3em
+}
+
+.partBk h1.slideBk_ti, .slideContact h1.slideBk_ti, .slideCourseUa h1.slideBk_ti{
+		color:#e46000;
+		background:transparent;
+}
+
+h1.slideBk_ti {
+    color: #e46000;
+    margin: 0;
+    padding-bottom: 0.7em;
+    padding-left: 60px;
+    padding-right: 80px;
+	text-align: center;
+}
+
+h1.slideBk_ti::before{
+	font-family:"fontello";
+	margin-right:0.2em;
+}
+
+.slideBkObj .slideBk_ti::before{
+	content:"\e811";
+}
+.slideBkIntro .slideBk_ti::before{
+	content:"\f129";
+}
+.slideBkConclu .slideBk_ti::before{
+	content:"\e813";
+}
+.slideBkExpUc .slideBk_ti::before{
+	content:"\e812";
+}
+.slideBkQuest .slideBk_ti::before{
+	content:"\e80e";
+}
+
+.eWeb{
+	margin:0 auto;
+}
+.eWeb_wide{
+	margin-right:1em;
+}
+
+.resFra{
+	margin:0px auto;
+	position: relative;
+	padding-top: 15px;
+}
+.objInFlow{
+	text-align:center;
+}
+.imgInFlow{
+	text-align:center;
+}
+.imgInline img,
+.objInline object {
+	vertical-align: middle;
+}
+.txt_tb{
+	margin:auto;
+	border:0.2em solid #e46000;
+	background-color: white;
+}
+.txt_tb caption{
+	color: gray;
+	font-style: italic;
+}
+.txt_tb td,
+.txt_tb th{
+	border:0.1em solid #e46000;
+	padding:0.2em
+}
+.txt_tb thead{
+	border-bottom:0.2em solid #e46000;
+}
+.txt_tb tfoot{
+	border-top:0.2em solid #e46000;
+}
+.txt_tb p{
+	margin: 1px 0;
+}
+
+.txt_tb .row_tbtr td, .txt_tb .row_tbtr th{
+	background-color:#e46000;
+	color:white
+}
+
+.col_tbcl {
+	background-color:#E2E7F1;
+}
+
+.txt_tb th{
+	color:#3C4961;
+	text-align:right
+}
+
+.txt_t_tbcl,
+.txt_t_tbtr{
+	background-color:#fff5ea;
+}
+.txt_n_tbtd p{
+	text-align: right;
+}
+.txt_w_tbtd p{
+	text-align: center;
+}
+.txt_emphasis_is,
+.txt_quote_ph,
+.txt_special_ph{
+	color:#e46000;
+}
+.resInFlow{
+	text-align: center;
+	margin-top:20px
+}
+
+.gallery{
+	margin-top:20px
+}
+
+.caption,
+.resInFlow_ti,
+.webCap_ti {
+	color: gray;
+	font-style: italic;
+	text-align: center;
+}
+.webCap_co{
+	text-align: center;
+}
+
+.docSrc{
+	padding-left: 1em;
+}
+.embedObj {
+	max-width: 1000px;
+	max-height: 800px;
+}
+.intructionM {
+	color: #666;
+	margin-top:20px;
+}
